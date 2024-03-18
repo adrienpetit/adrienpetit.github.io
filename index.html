@@ -1,98 +1,154 @@
-
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover a selection of products on Amazon.">
-  <meta name="keywords" content="Amazon, products, affiliate, deals, money, IT, Informatique">
-  <meta name="author" content="Your Name">
-  <title>Amazon Products - Best Deals</title>
-  <!-- Bootstrap Styles -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom Styles -->
-  <style>
-    body {
-      padding: 20px;
-    }
-    .affiliate-link {
-      margin-bottom: 10px;
-    }
-  </style>
-  <!-- Google Analytics Code -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_ANALYTICS_ID"></script>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3BTJH3P2XF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <title>Prix des disques</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Comparaison de disques durs et SSD sur Amazon, triés par prix par To">
 
-  gtag('config', 'G-3BTJH3P2XF');
-</script>
-</head>
-  
-<body>
-  <div class="container">
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#IT" class="nav-link active" aria-current="page">IT</a></li>
-        <li class="nav-item"><a href="#Gaming" class="nav-link">Gaming</a></li>
-        <!--<li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>-->
-      </ul>
-    </header>
-  </div>
-  <!-- IT links -->
-  <div id="IT" class="my-3 p-3 bg-body rounded shadow-sm bg-light-subtle" style="#f8f9fa">
-    <h6 class="border-bottom pb-2 mb-0">IT</h6>
-    <div class="d-flex text-body-secondary pt-3">
-      <p class="pb-3 mb-0 small lh-sm border-bottom">
-        <strong class="d-block text-gray-dark">SanDisk 1TB Extreme Portable Solid State Drive, USB-C USB 3.2 Gen. 2 External NVMe SSD up to 1050 MB/s IP65 rated dust and water resistance</strong>
-        <a class="btn btn-primary" href="https://amzn.to/4ag5hej" role="button">View on Amazon</a>
-      </p>
-    </div>
-    <div class="d-flex text-body-secondary pt-3">
-      <p class="pb-3 mb-0 small lh-sm border-bottom">
-        <strong class="d-block text-gray-dark">External Hard Drives 500GB - 2.5'' USB 3.0 Ultra Thin All-Aluminum HDD Storage for Xbox One, PS4, PC, Mac, Laptop, Desktop/Laptop, Wii U, TV, Windows (Grey)</strong>
-        <a class="btn btn-primary" href="https://amzn.to/43iGrbz" role="button">View on Amazon</a>
-      </p>
-    </div>
-  </div>
-  
-  <!-- Gaming links -->
-  <div id="Gaming" class="my-3 p-3 bg-body rounded shadow-sm bg-light-subtle" style="#f8f9fa">
-    <h6 class="border-bottom pb-2 mb-0">Gaming</h6>
-    <div class="d-flex text-body-secondary pt-3">
-      <p class="pb-3 mb-0 small lh-sm border-bottom">
-        <strong class="d-block text-gray-dark">Playstation 5</strong>
-        <a class="btn btn-primary" href="https://amzn.to/3TEjWKM" role="button">View on Amazon</a>
-      </p>
-    </div>
-    <div class="d-flex text-body-secondary pt-3">
-      <p class="pb-3 mb-0 small lh-sm border-bottom">
-        <strong class="d-block text-gray-dark">Nitendo Switch</strong>
-        <a class="btn btn-primary" href="https://amzn.to/4ag5hej" role="button">View on Amazon</a>
-      </p>
-    </div>
-  </div>
+    <!-- Intégration de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- JavaScript Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Mettre à jour le lien canonique -->
+
+    <!-- Autres métadonnées pour le référencement -->
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="disque dur, SSD, comparaison de prix, Amazon, To, Go, prix">
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        .affiliate-link {
+            margin-bottom: 10px;
+        }
+
+        .sidebar {
+            height: 100vh;
+            position: sticky;
+            top: 0;
+        }
+
+        .main-content {
+            padding-left: 20px;
+        }
+        th {
+            cursor: pointer;
+        }
+    </style>
+      <!-- Google Analytics Code -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_ANALYTICS_ID"></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3BTJH3P2XF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3BTJH3P2XF');
+    </script>
+</head>  
+
+    <div class="container-fluid">
+          <!-- Contenu principal -->
+          <main class="main-content">
+              <h2>AffLink</h2>
+              <div class="table-responsive small">
+                  <!-- Tableau des prix -->
+                  <table class="table table-striped table-sm" id="diskprices">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col" class="price-per-gb hidden" onclick="sortTable(0)">Prix par Go/To</th>
+                            <th scope="col" onclick="sortTable(1)">Prix</th>
+                            <th scope="col" onclick="sortTable(2)">Capacité Go/To</th>
+                            <th scope="col" onclick="sortTable(3)">Garantie</th>
+                            <th scope="col" onclick="sortTable(4)">Format</th>
+                            <th scope="col" onclick="sortTable(5)">Technologie</th>
+                            <th scope="col">Lien d'affiliation</th>
+                        </tr>
+                    </thead>
+                    <!-- Vos données de tableau ici -->
+                    <tbody>
+                      <tr>
+                        <td>37,07€</td>
+                        <td>1112,01€</td>
+                        <td>30 To</td>
+                        <td></td>
+                        <td>Tape</td>
+                        <td>LTO-8</td>
+                        <td class="name"><a href="https://amzn.to/43lVIIw">Hewlett Packard Enterprise HPE LTO-8 Ultrium 30TB RW Non Custom Labeled Data Cartridges 20 Pack</a></td>
+                      </tr>
+                      
+                      <tr>
+                        <td>26,25€</td>
+                        <td>104,99€</td>
+                        <td>4 To</td>
+                        <td></td>
+                        <td>Interne</td>
+                        <td>SATA</td>
+                        <td class="name"><a href="https://amzn.to/3VnEj0b">Seagate BarraCuda, 4 To, Disque dur interne HDD – 3,5" SATA 6 Gbit/s 5 400 tr/min, 256 Mo de mémoire cache, pour PC de bureau, Ouverture facile (ST4000DMZ04)
+                        </a></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+          </main>
+    </div>
+
+               
     <div class="container">
-      <footer class="py-3 my-4">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Amazon Associates Program</a></li>
-        </ul>
-        <p class="text-center text-body-secondary">© 2024 Affli, Inc</p>
-      </footer>
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="/faq.html" class="nav-link px-2 text-body-secondary">FAQ</a></li>
+                <li class="nav-item"><a href="/privacy.html" class="nav-link px-2 text-body-secondary">Privacy policy</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">© Amazon Programme Associatés</p>
+            <small class="text-center text-body-secondary"><p>Ce site est soutenu par des liens d'affiliation payants Amazon. <a href="/faq.html#disclosures">Plus d'informations</a></p></small>
+        </footer>
     </div>
 
 
-     <!-- Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
+    <!-- JavaScript pour trier la table -->
+    <script>
+    function sortTable(columnIndex) {
+        var table, rows, switching, i, x, y, shouldSwitch;
+        table = document.getElementById("diskprices");
+        switching = true;
+        while (switching) {
+            switching = false;
+            rows = table.rows;
+            for (i = 1; i < (rows.length - 1); i++) {
+                shouldSwitch = false;
+                x = rows[i].getElementsByTagName("td")[columnIndex];
+                y = rows[i + 1].getElementsByTagName("td")[columnIndex];
+                // Gérer les valeurs numériques pour le tri
+                if (!isNaN(parseFloat(x.innerHTML)) && !isNaN(parseFloat(y.innerHTML))) {
+                    if (parseFloat(x.innerHTML) > parseFloat(y.innerHTML)) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                } else { // Gérer les valeurs de texte pour le tri
+                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+            }
+            if (shouldSwitch) {
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+            }
+        }
+    }
+    </script>
+   
+    <!-- Assurez-vous d'inclure jQuery avant Bootstrap.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Inclure Popper.js avant Bootstrap.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>
-
-  <!-- 
