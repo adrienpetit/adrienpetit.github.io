@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Prix des disques</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Comparaison de disques durs et SSD sur Amazon, triés par prix par To">
-
+    <title>AffLink - Comparateur de Prix de Disques</title>
+    <meta name="description" content="Comparez les prix des disques durs et SSD sur Amazon, triés par prix par To. Trouvez les meilleures offres et économisez sur vos achats de stockage.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="disque dur, SSD, comparaison de prix, Amazon, To, Go, prix, IT, Matériel informatique, ordinateur, laptop, gaming, jeux video">
+    
     <!-- Intégration de Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- JavaScript Bootstrap -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Mettre à jour le lien canonique -->
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3BTJH3P2XF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3BTJH3P2XF');
+    </script>
 
-    <!-- Autres métadonnées pour le référencement -->
-    <meta name="robots" content="index, follow">
-    <meta name="keywords" content="disque dur, SSD, comparaison de prix, Amazon, To, Go, prix">
+    <!-- Custom CSS -->
     <style>
         body {
             padding: 20px;
+            font-family: Arial, sans-serif;
         }
 
         .affiliate-link {
@@ -34,128 +42,171 @@
         .main-content {
             padding-left: 20px;
         }
+
         th {
             cursor: pointer;
         }
     </style>
-      <!-- Google Analytics Code -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_ANALYTICS_ID"></script>
-      <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3BTJH3P2XF"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-3BTJH3P2XF');
-    </script>
 </head>  
-<div class="container">
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-        <span class="fs-4">AffLink</span>
-      </a>
-    </header>
-  </div>
-    <div class="container-fluid">
-          <!-- Contenu principal -->
-          <main class="main-content">
-              <h2>Hardware</h2>
-              <div class="table-responsive small">
-                  <!-- Tableau des prix -->
-                  <table class="table table-striped table-sm" id="diskprices">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col" class="price-per-gb hidden" onclick="sortTable(0)">Prix par Go/To</th>
-                            <th scope="col" onclick="sortTable(1)">Prix</th>
-                            <th scope="col" onclick="sortTable(2)">Capacité Go/To</th>
-                            <th scope="col" onclick="sortTable(3)">Garantie</th>
-                            <th scope="col" onclick="sortTable(4)">Format</th>
-                            <th scope="col" onclick="sortTable(5)">Technologie</th>
-                            <th scope="col">Lien d'affiliation</th>
-                        </tr>
-                    </thead>
-                    <!-- Vos données de tableau ici -->
-                    <tbody>
-                      <tr>
-                        <td>37,07€</td>
-                        <td>1112,01€</td>
-                        <td>30 To</td>
-                        <td></td>
-                        <td>Tape</td>
-                        <td>LTO-8</td>
-                        <td class="name"><a href="https://amzn.to/43lVIIw">Hewlett Packard Enterprise HPE LTO-8 Ultrium 30TB RW Non Custom Labeled Data Cartridges 20 Pack</a></td>
-                      </tr>
-                      
-                      <tr>
-                        <td>26,25€</td>
-                        <td>104,99€</td>
-                        <td>4 To</td>
-                        <td></td>
-                        <td>Interne</td>
-                        <td>SATA</td>
-                        <td class="name"><a href="https://amzn.to/3VnEj0b">Seagate BarraCuda, 4 To, Disque dur interne HDD – 3,5" SATA 6 Gbit/s 5 400 tr/min, 256 Mo de mémoire cache, pour PC de bureau, Ouverture facile (ST4000DMZ04)
-                        </a></td>
-                      </tr>
-                    </tbody>
-                </table>
-              </div>
-          </main>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                <span class="fs-4">AffLink - Comparateur de Prix Amazon</span>
+            </a>
+        </header>
     </div>
 
+    <div class="container-fluid">
+      <!-- Contenu principal -->
+      <main class="main-content">
+            <!-- Tableau des prix -->
+            <h2>Comparaison de Disques durs et SSD</h2>
+            <div class="table-responsive">
+              <div class="col">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="myInput" onkeyup="filterTable()" placeholder="Rechercher un produit..." aria-label="Search">
+                </div>
+              </div>
+            </div>
+            
+                <!-- Tableau des prix -->
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Prix</th>
+                            <th scope="col">Capacité Go/To</th>
+                            <th scope="col">Prix par Go/To</th>
+                            <th scope="col">Garantie</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Technologie</th>
+                            <th scope="col">Lien d'achat</th>
+                        </tr>
+                    </thead>
+                    <!-- Données du tableau -->
+                    <tbody id="myTableBody">
+                        <tr>
+                            <td>Hewlett Packard Enterprise HPE LTO-8 Ultrium 30TB RW Non Custom Labeled Data Cartridges 20 Pack</td>
+                            <td>1112,01€</td>
+                            <td>30 To</td>
+                            <td>37,07€</td>
+                            <td>-</td>
+                            <td>Tape</td>
+                            <td>LTO-8</td>
+                            <td class="name"><a href="https://amzn.to/43lVIIw" class="btn btn-primary">Voir sur Amazon</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>Seagate BarraCuda, 4 To, Disque dur interne HDD – 3,5" SATA 6 Gbit/s 5 400 tr/min, 256 Mo de mémoire cache, pour PC de bureau, Ouverture facile (ST4000DMZ04)</td>
+                            <td>104,99€</td>
+                            <td>4 To</td>
+                            <td>26,25€</td>
+                            <td>-</td>
+                            <td>Interne</td>
+                            <td>SATA</td>
+                            <td class="name"><a href="https://amzn.to/3VnEj0b" class="btn btn-primary">Voir sur Amazon</a></td>
+                        </tr>
+
+                        <tr>
+                          <td>Seagate BarraCuda, 8 To, disque dur interne, 3,5 pouces, SATA, 6 Gbit/s, 5 400 tr/min, 256 Mo de cache, pour ordinateur de bureau, FFP (ST8000DMZ04/004)</td>
+                          <td>147,99€</td>
+                          <td>8 To</td>
+                          <td>18,49€</td>
+                          <td>-</td>
+                          <td>Interne</td>
+                          <td>SATA</td>
+                          <td class="name"><a href="https://amzn.to/43nlRqt" class="btn btn-primary">Voir sur Amazon</a></td>
+                        </tr>
+
+                        <tr>
+                          <td>SanDisk 4 To Extreme PRO Disque SSD portable, USB-C USB 3.2 Gén. 2x2, Disque SSD NVMe externe, jusqu'à 2000 Mo/s Résistance à la poussière et à l'eau classée IP65</td>
+                          <td>298,99€</td>
+                          <td>4 To</td>
+                          <td>74,74€</td>
+                          <td>-</td>
+                          <td>Externe</td>
+                          <td>Usb</td>
+                          <td class="name"><a href="https://amzn.to/4clqwxh" class="btn btn-primary">Voir sur Amazon</a></td>
+                        </tr>
+
+                        <tr>
+                          <td>Disques durs externes 500Go - 2.5'' USB 3.0 Ultra Fin Tout-Aluminium Stockage HDD pour Xbox One, PS4, PC, Mac, Laptop, Ordinateur de Bureau/ Portable, Wii U, TV, Windows(Gris)</td>
+                          <td>29,99€</td>
+                          <td>500 Go</td>
+                          <td>0,059€</td>
+                          <td>-</td>
+                          <td>Externe</td>
+                          <td>Usb</td>
+                          <td class="name"><a href="https://amzn.to/4crKiHh" class="btn btn-primary">Voir sur Amazon</a></td>
+                        </tr>
+
+                        <tr>
+                          <td>UnionSine Disque Dur Externe Portable 500Go Ultra-Mince 2.5" USB 3.0, SATA, Stockage HDD pour PC, Mac, Ordinateur de Bureau, Ordinateur Portable, Wii U, Xbox, PS4 (Noir) HD2510</td>
+                          <td>25,73€</td>
+                          <td>500 Go</td>
+                          <td>0,051€</td>
+                          <td>-</td>
+                          <td>Externe</td>
+                          <td>Usb</td>
+                          <td class="name"><a href="https://amzn.to/43t68GA" class="btn btn-primary">Voir sur Amazon</a></td>
+                        </tr>
+
+
+                        <tr>
+                          <td>UnionSine Disque Dur Externe Portable 1To Ultra-Mince 2.5" USB 3.0, SATA, Stockage HDD pour PC, Mac, Ordinateur de Bureau, Ordinateur Portable, Wii U, Xbox, PS4 (Noir) HD2510</td>
+                          <td>50,89€</td>
+                          <td>1 To</td>
+                          <td>50,89€</td>
+                          <td>-</td>
+                          <td>Externe</td>
+                          <td>Usb</td>
+                          <td class="name"><a href="https://amzn.to/43t68GA" class="btn btn-primary">Voir sur Amazon</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
                
     <div class="container">
+        <!-- Footer -->
         <footer class="py-3 my-4">
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
                 <li class="nav-item"><a href="/learnMore.html" class="nav-link px-2 text-body-secondary">FAQ</a></li>
-                <li class="nav-item"><a href="/privacy.html" class="nav-link px-2 text-body-secondary">Privacy policy</a></li>
+                <li class="nav-item"><a href="/privacy.html" class="nav-link px-2 text-body-secondary">Politique de confidentialité</a></li>
             </ul>
-            <p class="text-center text-body-secondary">© Amazon Programme Associatés</p>
-            <small class="text-center text-body-secondary"><p>Ce site est soutenu par des liens d'affiliation payants Amazon. <a href="/learnMore.html">Plus d'informations</a></p></small>
+            <p class="text-center text-body-secondary">© Amazon Programme Associés</p>
+            <small class="text-center text-body-secondary">Ce site participe au Programme Partenaires d'Amazon, un programme d'affiliation conçu pour permettre à des sites de percevoir une rémunération grâce à la création de liens vers Amazon.</small>
         </footer>
     </div>
-
-
-    <!-- JavaScript pour trier la table -->
     <script>
-    function sortTable(columnIndex) {
-        var table, rows, switching, i, x, y, shouldSwitch;
-        table = document.getElementById("diskprices");
-        switching = true;
-        while (switching) {
-            switching = false;
-            rows = table.rows;
-            for (i = 1; i < (rows.length - 1); i++) {
-                shouldSwitch = false;
-                x = rows[i].getElementsByTagName("td")[columnIndex];
-                y = rows[i + 1].getElementsByTagName("td")[columnIndex];
-                // Gérer les valeurs numériques pour le tri
-                if (!isNaN(parseFloat(x.innerHTML)) && !isNaN(parseFloat(y.innerHTML))) {
-                    if (parseFloat(x.innerHTML) > parseFloat(y.innerHTML)) {
-                        shouldSwitch = true;
+    function filterTable() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTableBody");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td");
+            for (var j = 0; j < td.length; j++) {
+                var cell = td[j];
+                if (cell) {
+                    txtValue = cell.textContent || cell.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
                         break;
-                    }
-                } else { // Gérer les valeurs de texte pour le tri
-                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                        shouldSwitch = true;
-                        break;
+                    } else {
+                        tr[i].style.display = "none";
                     }
                 }
-            }
-            if (shouldSwitch) {
-                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-                switching = true;
             }
         }
     }
     </script>
-   
-    <!-- Assurez-vous d'inclure jQuery avant Bootstrap.js -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <!-- Inclure Popper.js avant Bootstrap.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
+ 
