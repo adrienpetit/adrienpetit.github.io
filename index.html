@@ -1,183 +1,188 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
+<html lang="fr" data-bs-theme="light"><head><script src="/docs/5.3/assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AffLink - Comparateur de Prix Amazon</title>
+    <meta name="description" content="">
     <meta name="description" content="Comparez les prix des disques durs et SSD sur Amazon, triés par prix par To. Trouvez les meilleures offres et économisez sur vos achats de stockage.">
     <meta name="robots" content="index, follow">
-    <meta name="keywords" content="disque dur, SSD, comparaison de prix, Amazon, To, Go, prix, IT, Matériel informatique, ordinateur, laptop, gaming, jeux video,meilleurs ventes,ventes,deals, réduction">
-    
-    <!-- Intégration de Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- JavaScript Bootstrap -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <meta name="keywords" content="Gadget, Hightech, tech, comparaison de prix, Amazon, prix, IT, Matériel informatique, ordinateur, laptop, gaming, jeux video,meilleurs ventes,ventes,deals,réduction">
+    <title>AffLink - Gadget Hightech</title>
 
+    <!-- Intégration de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- JavaScript Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <!-- Google Analytics -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/product/">
+
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+    <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+        <!-- Favicons -->
+     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3BTJH3P2XF"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-3BTJH3P2XF');
-    </script>
-
-    <!-- Custom CSS -->
+    </script>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        body {
-            padding: 20px;
-            font-family: Arial, sans-serif;
+        .rating {
+            font-size: 24px;
         }
-
-        .affiliate-link {
-            margin-bottom: 10px;
-        }
-
-        .sidebar {
-            height: 100vh;
-            position: sticky;
-            top: 0;
-        }
-
-        .main-content {
-            padding-left: 20px;
-        }
-
-        th {
-            cursor: pointer;
+        .rating i {
+            color: orange;
         }
     </style>
-</head>  
-<body>
+</head>
+<body> 
+<header data-bs-theme="dark">
+  <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container">
-        <!-- Header -->
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-                <span class="fs-4">AffLink - Comparateur de Prix Amazon</span>
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <strong>Afflink</strong>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Bienvenue sur notre Site Vitrine High Tech !</h1>
+        <p class="lead text-body-secondary">Découvrez notre collection de gadgets High Tech Amazon soigneusement sélectionnés pour vous.</p>
+        <p>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm" style="width: 18rem;">
+            <a href="">
+            <img src="https://m.media-amazon.com/images/I/61Ra0-2X8TL._AC_SL1500_.jpg" class="card-img-top">
             </a>
-        </header>
-    </div>
-
-    <div class="container-fluid">
-      <!-- Contenu principal -->
-      <main class="main-content">
-            <!-- Tableau des prix -->
-            <h2>Comparaison des meilleurs ventes informatique</h2>
-            <div class="table-responsive">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="myInput" onkeyup="filterTable()" placeholder="Rechercher un produit..." aria-label="Search">
+            <div class="card-body">
+              <p class="card-text">Videoprojecteur</p>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
                 </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-body-secondary">89,99€</small>
+              </div>
             </div>
-            
-            <!-- Tableau des prix -->
-            <table class="table table-striped">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Nom</th>
-                        <th scope="col">Prix</th>
-                        <th scope="col">Lien</th>
-                    </tr>
-                </thead>
-                <!-- Données du tableau -->
-                <tbody id="myTableBody">
-                    <tr>
-                        <td>SanDisk 128 Go Extreme Carte Mémoire MicroSDXC + Adaptateur SD avec Performances Applicatives A2 Jusqu'à 190 Mo/s, Classe 10, U3, V30</td>
-                        <td>13,99€</td>
-                        <td class="name"><a href="https://amzn.to/3PxrZH2" class="btn btn-primary">Voir sur Amazon</a></td>
-                    </tr>
+          </div>
+        </div>
+       <!-- <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                    <tr>
-                        <td>HP 305 Cartouche d'Encre Noire Authentique (3YM61AE)</td>
-                        <td>11,99€</td>
-                        <td class="name"><a href="https://amzn.to/3VvpPLD" class="btn btn-primary">Voir sur Amazon</a></td>
-                    </tr>
-                
-                    <tr>
-                        <td>SanDisk 128 Go Extreme Carte Mémoire MicroSDXC + Adaptateur SD avec Performances Applicatives A2 Jusqu'à 190 Mo/s, Classe 10, U3, V30</td>
-                        <td>13,99€</td>
-                        <td class="name"><a href="https://amzn.to/3PxrZH2" class="btn btn-primary">Voir sur Amazon</a></td>
-                    </tr>
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>-->
 
-                    <tr>
-                        <td>HP 305 Pack de 2 Cartouches d'Encre Noire et Trois Couleurs Authentiques (6ZD17AE)</td>
-                        <td>30,57€</td>
-                        <td class="name"><a href="https://amzn.to/3TC5Usa" class="btn btn-primary">Voir sur Amazon</a></td>
-                    </tr>
-                    <tr>
-                        <td>HP 302 Pack de 2 cartouches d'encre, noire et Cyan, Magenta, Jaune, authentiques (X4D37AE)</td>
-                        <td>38,49€</td>
-                        <td class="name"><a href="https://amzn.to/4a5BlC7" class="btn btn-primary">Voir sur Amazon</a></td>
-                    </tr>
-                    <tr>
-                        <td>SanDisk 128 Go Ultra microSDXC UHS-I Carte + Adaptateur SD, avec jusqu'à 140 Mo/s, Classe 10, U1, homologuée A1</td>
-                        <td>15,22€</td>
-                        <td class="name"><a href="https://amzn.to/497j2ec" class="btn btn-primary">Voir sur Amazon</a></td>
-                    </tr>
-                    <tr>
-                        <td>Samsung SSD 990 Pro NVMe M.2 Pcle 4.0, SSD Interne, Capacité 2 To, Vitesse de lecture jusqu'à 7 450 Mo/s, Gestion Intelligente de la Chaleur avec Revêtement en Nickel, MZ-V9P2T0BW</td>
-                        <td>15,99€</td>
-                        <td class="name"><a href="https://amzn.to/49acifE" class="btn btn-primary">Voir sur Amazon</a></td>
-                    </tr>
-                    <tr>
-                        <td>UnionSine Disque Dur Externe Portable 500Go Ultra-Mince 2.5" USB 3.0, SATA, Stockage HDD pour PC, Mac, Ordinateur de Bureau, Ordinateur Portable, Wii U, Xbox, PS4 (Noir) HD2510</td>
-                        <td>24,44€</td>
-                        <td class="name"><a href="https://amzn.to/43wyAqW" class="btn btn-primary">Voir sur Amazon</a></td>
-                    </tr>
-                    <tr>
-                        <td>Acer Nitro KG242YEbiif Écran PC Gaming 24" Full HD, 100Hz (1920x1080, 16:9, FreeSync, 1ms VRB, 250 Nits, Comfyview, BlueLightShield, 2xHDMI 2.0/DP 1.2) Moniteur PC Inclinable, Couleur Noir</td>
-                        <td>85,41€</td>
-                        <td class="name"><a href="https://amzn.to/3vktf9B" class="btn btn-primary">Voir sur Amazon</a></td>
-                    </tr>
-
-                <!-- Ordi -->
-                     <tr>
-                        <td>HP DeskJet 4220e Imprimante tout en un - Jet d'encre couleur – 3 mois d’Instant Ink inclus avec HP+ (Photocopie, Scan, Impression, Wifi, Chargeur automatique de documents)</td>
-                        <td>59,90€</td>
-                        <td class="name"><a href="https://amzn.to/4akAvAU" class="btn btn-primary">Voir sur Amazon</a></td>
-                    </tr>
-                    
-                </tbody>
-            </table>
-        </main>
+      </div>
     </div>
-               
-    <div class="container">
-        <!-- Footer -->
-        <footer class="py-3 my-4">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="/learnMore.html" class="nav-link px-2 text-body-secondary">FAQ</a></li>
-                <li class="nav-item"><a href="/privacy.html" class="nav-link px-2 text-body-secondary">Politique de confidentialité</a></li>
-            </ul>
-            <p class="text-center text-body-secondary">© Amazon Programme Associés</p>
-            <small class="text-center text-body-secondary">Ce site participe au Programme Partenaires d'Amazon, un programme d'affiliation conçu pour permettre à des sites de percevoir une rémunération grâce à la création de liens vers Amazon.</small>
-        </footer>
-    </div>
-    <script>
-    function filterTable() {
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTableBody");
-        tr = table.getElementsByTagName("tr");
-        for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td");
-            for (var j = 0; j < td.length; j++) {
-                var cell = td[j];
-                if (cell) {
-                    txtValue = cell.textContent || cell.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                        break;
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                }
-            }
-        }
-    }
-    </script>
+  </div>
 
+</main>
+
+<footer class="container py-5">
+  <div class="row">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="/learnMore.html" class="nav-link px-2 text-body-secondary">FAQ</a></li>
+        <li class="nav-item"><a href="/privacy.html" class="nav-link px-2 text-body-secondary">Politique de confidentialité</a></li>
+    </ul>
+    <p class="text-center text-body-secondary">© Amazon Programme Associés</p>
+    <small class="text-center text-body-secondary">Ce site participe au Programme Partenaires d'Amazon, un programme d'affiliation conçu pour permettre à des sites de percevoir une rémunération grâce à la création de liens vers Amazon.</small>
+  </div>
+</footer>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>   
+<div id="eid-safari-extension-is-installed"></div>
 </body>
 </html>
- 
